@@ -1,0 +1,47 @@
+public class Donut {
+    
+    private String type, topping,size;
+    private double price;
+    
+    public Donut(String ty, String top, String sz, double pr){
+        type = ty;
+        topping = top;
+        size = sz;
+        price = pr;
+    }
+    public Donut(String type, String topping, String size){
+        this.type = type;
+        this.topping = topping;
+        this.size = size;
+    }
+    //setter method 
+    public void  setPrice(double pr){
+        price = pr;
+    }
+    //getter method
+    public double getPrice(){
+        return price;
+    }
+    public double calculatePriceTax(){
+        double tax = 0.03 * price;
+        price = price + tax;
+        return price;
+    }
+    public void setPriceBasedSize(){
+        if(size.equalsIgnoreCase("Small"))
+            price = 2.50;
+        else if (size.equalsIgnoreCase("Medium"))
+            price = 3.00;
+        else
+            price = 3.50;
+    }
+    public void printDonutInfo(){
+        System.out.println("Donut type: " + type); 
+        System.out.println("Donut Topping: " + topping);
+        System.out.println("Donut Size: " + size);
+        System.out.println("Donut Price: RM " + price);
+        
+    }
+
+}
+
