@@ -1,0 +1,17 @@
+
+public class TestDonut {
+    public static void main(String[] args) {
+        Donut donut1 = new Donut ("Swirl", "White Chocolate", "large", 3.50);
+        Donut donut2 = new Donut("Mini", "Almond", "Small");
+        donut2.setPrice(5.00);
+        
+        System.out.println("Donut 1:"); 
+        donut1.printDonutInfo();
+        System.out.println("Total price: RM" + donut1.calculatePriceTax());
+                           
+        System.out.println("\nDonut 2:");
+        donut2.printDonutInfo();
+        System.out.println("Total price: RM" + donut2.calculatePriceTax());
+        
+    }
+}
